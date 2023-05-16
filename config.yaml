@@ -1,0 +1,104 @@
+generateSourceCodeOnly: true
+templateDir: my_custom_templates
+files:
+  LICENSE: {}
+  Kinde.Api/ApiClient.cs:
+    destinationFilename: /Kinde.Api/ApiClient.cs
+  Kinde.Api/Enums/AuthorizationStates.cs:
+    destinationFilename: /Kinde.Api/Enums/AuthorizationStates.cs
+  Kinde.Api/Flows/AuthorizationCodeFlow.cs:
+    destinationFilename: /Kinde.Api/Flows/AuthorizationCodeFlow.cs
+  Kinde.Api/Flows/BaseAuthorizationFlow.cs:
+    destinationFilename: /Kinde.Api/Flows/BaseAuthorizationFlow.cs
+  Kinde.Api/Flows/ClientCredentialsFlow.cs:
+    destinationFilename: /Kinde.Api/Flows/ClientCredentialsFlow.cs
+  Kinde.Api/Flows/IAuthorizationFlow.cs:
+    destinationFilename: /Kinde.Api/Flows/IAuthorizationFlow.cs
+  Kinde.Api/Flows/ICodeFlow.cs:
+    destinationFilename: /Kinde.Api/Flows/ICodeFlow.cs
+  Kinde.Api/Flows/PKCES256Flow.cs:
+    destinationFilename: /Kinde.Api/Flows/PKCES256Flow.cs
+  Kinde.Api/Hashing/BaseCodeVerifier.cs:
+    destinationFilename: /Kinde.Api/Hashing/BaseCodeVerifier.cs
+  Kinde.Api/Hashing/ICodeVerifier.cs:
+    destinationFilename: /Kinde.Api/Hashing/ICodeVerifier.cs
+  Kinde.Api/Hashing/SHA256CodeVerifier.cs:
+    destinationFilename: /Kinde.Api/Hashing/SHA256CodeVerifier.cs
+  Kinde.Api/KindeClient.cs:
+    destinationFilename: /Kinde.Api/KindeClient.cs
+  Kinde.Api/KindeClientFactory.cs:
+    destinationFilename: /Kinde.Api/KindeClientFactory.cs
+  Kinde.Api/KindeHttpClient.cs:
+    destinationFilename: /Kinde.Api/KindeHttpClient.cs
+  Kinde.Api/Models/Configuration/ApplicationConfiguration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/ApplicationConfiguration.cs
+  Kinde.Api/Models/Configuration/AuthorizationCodeConfiguration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/AuthorizationCodeConfiguration.cs
+  Kinde.Api/Models/Configuration/AuthorizationConfigurationWrapper.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/AuthorizationConfigurationWrapper.cs
+  Kinde.Api/Models/Configuration/BaseAuthorizationConfiguration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/BaseAuthorizationConfiguration.cs
+  Kinde.Api/Models/Configuration/ClientCredentialsConfiguration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/ClientCredentialsConfiguration.cs
+  Kinde.Api/Models/Configuration/DefaultApplicationConfigurationProvider.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/DefaultApplicationConfigurationProvider.cs
+  Kinde.Api/Models/Configuration/DefaultAuthorizationConfigurationProvider.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/DefaultAuthorizationConfigurationProvider.cs
+  Kinde.Api/Models/Configuration/DefaultConfigurationProvider.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/DefaultConfigurationProvider.cs
+  Kinde.Api/Models/Configuration/IApplicationConfiguration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/IApplicationConfiguration.cs
+  Kinde.Api/Models/Configuration/IApplicationConfigurationProvider.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/IApplicationConfigurationProvider.cs
+  Kinde.Api/Models/Configuration/IAuthorizationConfiguration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/IAuthorizationConfiguration.cs
+  Kinde.Api/Models/Configuration/IAuthorizationConfigurationProvider.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/IAuthorizationConfigurationProvider.cs
+  Kinde.Api/Models/Configuration/IConfigurationProvider.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/IConfigurationProvider.cs
+  Kinde.Api/Models/Configuration/IdentityProviderConfiguration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/IdentityProviderConfiguration.cs
+  Kinde.Api/Models/Configuration/IIdentityProviderConfiguration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/IIdentityProviderConfiguration.cs
+  Kinde.Api/Models/Configuration/IRedirectAuthorizationConfiguration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/IRedirectAuthorizationConfiguration.cs
+  Kinde.Api/Models/Configuration/PKCEConfiguration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/PKCEConfiguration.cs
+  Kinde.Api/Models/Configuration/PKCES256Configuration.cs:
+    destinationFilename: /Kinde.Api/Models/Configuration/PKCES256Configuration.cs
+  Kinde.Api/Models/Tokens/OauthToken.cs:
+    destinationFilename: /Kinde.Api/Models/Tokens/OauthToken.cs
+  Kinde.Api/Models/User/AuthorizationCodeUserActionResolver.cs:
+    destinationFilename: /Kinde.Api/Models/User/AuthorizationCodeUserActionResolver.cs
+  Kinde.Api/Models/User/DefaultUserActionResolver.cs:
+    destinationFilename: /Kinde.Api/Models/User/DefaultUserActionResolver.cs
+  Kinde.Api/Models/User/IUserActionResolver.cs:
+    destinationFilename: /Kinde.Api/Models/User/IUserActionResolver.cs
+  Kinde.Api/Models/User/KindeSSOUser.cs:
+    destinationFilename: /Kinde.Api/Models/User/KindeSSOUser.cs
+  Kinde.Api/Models/User/PKCEUserActionResolver.cs:
+    destinationFilename: /Kinde.Api/Models/User/PKCEUserActionResolver.cs
+  Kinde.Api/Models/User/UserActionsCompletedEventArgs.cs:
+    destinationFilename: /Kinde.Api/Models/User/UserActionsCompletedEventArgs.cs
+  Kinde.Api/Models/User/UserActionsNeededEventArgs.cs:
+    destinationFilename: /Kinde.Api/Models/User/UserActionsNeededEventArgs.cs
+  Kinde.Api/Models/Utils/AuthorizationCodeStore.cs:
+    destinationFilename: /Kinde.Api/Models/Utils/AuthorizationCodeStore.cs
+  Kinde.Api/Models/Utils/ItemAddedEventArgs.cs:
+    destinationFilename: /Kinde.Api/Models/Utils/ItemAddedEventArgs.cs
+  Kinde.Api.Test/AuthorizationTests.cs:
+    destinationFilename: /Kinde.Api.Test/AuthorizationTests.cs
+  Kinde.Api.Test/CodeTests.cs:
+    destinationFilename: /Kinde.Api.Test/CodeTests.cs
+  Kinde.Api.Test/Mocks/Flows/MockAuthCodeConfiguration.cs:
+    destinationFilename: /Kinde.Api.Test/Mocks/Flows/MockAuthCodeConfiguration.cs
+  Kinde.Api.Test/Mocks/Flows/MockClientConfiguration.cs:
+    destinationFilename: /Kinde.Api.Test/Mocks/Flows/MockClientConfiguration.cs
+  Kinde.Api.Test/Mocks/Flows/MockPKCEConfiguration.cs:
+    destinationFilename: /Kinde.Api.Test/Mocks/Flows/MockPKCEConfiguration.cs
+  Kinde.Api.Test/Mocks/MockHttpClient.cs:
+    destinationFilename: /Kinde.Api.Test/Mocks/MockHttpClient.cs
+  Kinde.Api.Test/Mocks/MockIdentityProviderConfiguration.cs:
+    destinationFilename: /Kinde.Api.Test/Mocks/MockIdentityProviderConfiguration.cs
+  Kinde.Api.Test/UserProfileTests.cs:
+    destinationFilename: /Kinde.Api.Test/UserProfileTests.cs
