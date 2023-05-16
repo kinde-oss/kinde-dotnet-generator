@@ -2,26 +2,42 @@
 
   <PropertyGroup>
     <TargetFramework{{#multiTarget}}s{{/multiTarget}}>{{targetFramework}}</TargetFramework{{#multiTarget}}s{{/multiTarget}}>
-    <AssemblyName>{{packageName}}</AssemblyName>
-    <PackageId>{{packageName}}</PackageId>
+    <PackageId>Kinde.SDK</PackageId>
     <OutputType>Library</OutputType>
-    <Authors>{{packageAuthors}}</Authors>
-    <Company>{{packageCompany}}</Company>
-    <AssemblyTitle>{{packageTitle}}</AssemblyTitle>
-    <Description>{{packageDescription}}</Description>
-    <Copyright>{{packageCopyright}}</Copyright>
-    <RootNamespace>{{packageName}}</RootNamespace>
+    <Authors>Kinde</Authors>
+    <Company>Kinde</Company>
+		<Product>Kinde Platform</Product>
+    <Description>The Kinde .NET SDK allows developers to quickly and securely integrate a new or an existing .NET application to the Kinde platform.</Description>
+    <Copyright>Kinde</Copyright>
     <Version>{{packageVersion}}</Version>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\{{packageName}}.xml</DocumentationFile>{{#licenseId}}
     <PackageLicenseExpression>{{.}}</PackageLicenseExpression>{{/licenseId}}
-    <RepositoryUrl>https://{{{gitHost}}}/{{{gitUserId}}}/{{{gitRepoId}}}.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/kinde-oss/kinde-dotnet-sdk</RepositoryUrl>
     <RepositoryType>git</RepositoryType>{{#releaseNote}}
-    <PackageReleaseNotes>{{.}}</PackageReleaseNotes>{{/releaseNote}}{{#packageTags}}
-    <PackageTags>{{{.}}}</PackageTags>{{/packageTags}}{{#nrt}}
+    <PackageReleaseNotes>{{.}}</PackageReleaseNotes>{{/releaseNote}}
+    <PackageTags>Kinde;Authentication;Billing;Feature;Flag;Startups</PackageTags>{{#nrt}}
     <Nullable>{{#useGenericHost}}enable{{/useGenericHost}}{{^useGenericHost}}annotations{{/useGenericHost}}</Nullable>{{/nrt}}
     <ImplicitUsings>enable</ImplicitUsings>
     <NoWarn>1591</NoWarn>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/kinde-oss/kinde-dotnet-sdk</PackageProjectUrl>
+    <PackageIcon>favicon-3.png</PackageIcon>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+		<None Remove="Dependencies\favicon-3.png"/>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="README.md" Pack="true" PackagePath="\"/>
+		<EmbeddedResource Include="Dependencies\favicon-3.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</EmbeddedResource>
+	</ItemGroup>
 
   <ItemGroup>
     {{#useCompareNetObjects}}

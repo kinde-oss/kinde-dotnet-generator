@@ -2,6 +2,10 @@ generateSourceCodeOnly: true
 templateDir: my_custom_templates
 files:
   LICENSE: {}
+  README_API.mustache:
+    destinationFilename: /Kinde.Api/README.md
+  Kinde.Api/Dependencies/favicon-3.png:
+    destinationFilename: /Kinde.Api/Dependencies/favicon-3.png
   Kinde.Api/ApiClient.cs:
     destinationFilename: /Kinde.Api/ApiClient.cs
   Kinde.Api/Enums/AuthorizationStates.cs:

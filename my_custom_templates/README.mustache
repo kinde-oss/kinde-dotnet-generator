@@ -44,7 +44,7 @@ Configuration example:
     "LogoutUrl":  "https://localhost:7165/home"
   },
   "DefaultAuthorizationConfiguration": {
-    "ConfigurationType": "Kinde.Api.Models.Configuration.PKCES256Configutation",
+    "ConfigurationType": "Kinde.Api.Models.Configuration.PKCES256Configuration",
     "Configuration": {
       "State": null,
       "ClientId": "12354359asf123rasfaf",
@@ -217,11 +217,11 @@ There is a method ```GetUserDetails``` to get user profile.
 
 #### Getting token details
 
-Note, that some of claims and properties will be unavaliable if scope 'profile' wasn't used while authorizing. In this case null will be returned.
+Note, that some of claims and properties will be unavailable if scope 'profile' wasn't used while authorizing. In this case null will be returned.
 ```csharp
     var client = KindeClientFactory.Instance.GetOrCreate(correlationId, _appConfigurationProvider.Get());
     var claim = client.GetClaim("sub", "id_token"); //get claim
-    var organisations = client.GetOrganisations(); ; //get avaliable organisations
+    var organisations = client.GetOrganisations(); ; //get available organisations
     var organisation = client.GetOrganisation();  //get single organisation
     var permissions = client.GetPermissions(); //get all permissions
     var permission = client.GetPermission("something"); //get permission
