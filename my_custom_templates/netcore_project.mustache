@@ -1,0 +1,71 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework{{#multiTarget}}s{{/multiTarget}}>{{targetFramework}}</TargetFramework{{#multiTarget}}s{{/multiTarget}}>
+    <PackageId>Kinde.SDK</PackageId>
+    <OutputType>Library</OutputType>
+    <Authors>Kinde</Authors>
+    <Company>Kinde</Company>
+    <Product>Kinde Platform</Product>
+    <Description>The Kinde .NET SDK allows developers to quickly and securely integrate a new or an existing .NET application to the Kinde platform.</Description>
+    <Copyright>Kinde</Copyright>
+    <Version>{{packageVersion}}</Version>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\{{packageName}}.xml</DocumentationFile>{{#licenseId}}
+    <PackageLicenseExpression>{{.}}</PackageLicenseExpression>{{/licenseId}}
+    <RepositoryUrl>https://github.com/kinde-oss/kinde-dotnet-sdk</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>{{#releaseNote}}
+    <PackageReleaseNotes>{{.}}</PackageReleaseNotes>{{/releaseNote}}
+    <PackageTags>Kinde;Authentication;Billing;Feature;Flag;Startups</PackageTags>{{#nrt}}
+    <Nullable>{{#useGenericHost}}enable{{/useGenericHost}}{{^useGenericHost}}annotations{{/useGenericHost}}</Nullable>{{/nrt}}
+    <ImplicitUsings>enable</ImplicitUsings>
+    <NoWarn>1591</NoWarn>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/kinde-oss/kinde-dotnet-sdk</PackageProjectUrl>
+    <PackageIcon>favicon-3.png</PackageIcon>
+    <GenerateDocumentationFile>False</GenerateDocumentationFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Dependencies\favicon-3.png"/>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
+    <EmbeddedResource Include="Dependencies\favicon-3.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    {{#useCompareNetObjects}}
+    <PackageReference Include="CompareNETObjects" Version="4.61.0" />
+    {{/useCompareNetObjects}}
+    {{^useGenericHost}}
+    <PackageReference Include="JsonSubTypes" Version="2.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    {{/useGenericHost}}
+      {{#useRestSharp}}
+    <PackageReference Include="RestSharp" Version="108.0.3" />
+      {{/useRestSharp}}
+      {{#useGenericHost}}
+    <PackageReference Include="Microsoft.Extensions.Http" Version="{{^netStandard}}6.0.0{{/netStandard}}{{#netStandard}}5.0.0{{/netStandard}}" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="{{^netStandard}}6.0.1{{/netStandard}}{{#netStandard}}5.0.0{{/netStandard}}" />
+      {{#supportsRetry}}
+    <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="{{^netStandard}}6.0.4{{/netStandard}}{{#netStandard}}5.0.1{{/netStandard}}" />
+      {{/supportsRetry}}
+      {{/useGenericHost}}
+      {{#supportsRetry}}
+    <PackageReference Include="Polly" Version="{{^netStandard}}7.2.3{{/netStandard}}{{#netStandard}}7.2.3{{/netStandard}}" />
+      {{/supportsRetry}}
+    {{#validatable}}
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+    {{/validatable}}
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+  </ItemGroup>
+
+{{>netcore_project.additions}}</Project>
