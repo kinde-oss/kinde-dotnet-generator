@@ -106,3 +106,5 @@ files:
     destinationFilename: ./Kinde.Api.Test/Mocks/MockIdentityProviderConfiguration.cs
   Kinde.Api.Test/UserProfileTests.cs:
     destinationFilename: ./Kinde.Api.Test/UserProfileTests.cs
+modelNameMappings:
+  api: ApiModel
