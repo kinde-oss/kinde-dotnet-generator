@@ -35,7 +35,7 @@ Also, see the SDKs section in Kinde’s [contributing guidelines](https://githu
 Run the following command to generate the SDK:
 
 ```bash
-openapi-generator-cli generate -i https://api-spec.kinde.com/kinde-combined-api-specs.yaml -g csharp -o Kinde.Sdk --package-name=Kinde.Api -c config.yaml --library=httpclient --additional-properties=targetFramework=net6.0,packageVersion=1.2.10,sourceFolder=
+openapi-generator-cli generate -i https://api-spec.kinde.com/kinde-combined-api-specs.yaml -g csharp -o Kinde.Sdk --package-name=Kinde.Api -c config.yaml --library=httpclient --additional-properties=targetFramework=net6.0,packageVersion=1.2.11,sourceFolder=
 ```
 
 **Note:** The API specifications should always point to Kinde's hosted version: https://api-spec.kinde.com/kinde-combined-api-specs.yaml. This is set via the ` -i` option in the [OpenAPI Generator CLI](https://openapi-generator.tech/docs/usage/), for example:
