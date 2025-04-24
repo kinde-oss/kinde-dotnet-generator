@@ -28,6 +28,8 @@ files:
     destinationFilename: ./Kinde.Api/Hashing/ICodeVerifier.cs
   Kinde.Api/Hashing/SHA256CodeVerifier.cs:
     destinationFilename: ./Kinde.Api/Hashing/SHA256CodeVerifier.cs
+  Kinde.Api/IsExternalInit.cs:
+    destinationFilename: ./Kinde.Api/IsExternalInit.cs
   Kinde.Api/KindeClient.cs:
     destinationFilename: ./Kinde.Api/KindeClient.cs
   Kinde.Api/KindeClientFactory.cs:
