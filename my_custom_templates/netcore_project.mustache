@@ -26,6 +26,7 @@
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <IncludeSymbols>True</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <LangVersion>10</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -58,14 +59,14 @@
       {{/supportsRetry}}
       {{/useGenericHost}}
       {{#supportsRetry}}
-    <PackageReference Include="Polly" Version="{{^netStandard}}7.2.3{{/netStandard}}{{#netStandard}}7.2.3{{/netStandard}}" />
+    <PackageReference Include="Polly" Version="{{^netStandard}}7.2.3{{/netStandard}}{{#netStandard}}8.5.2{{/netStandard}}" />
       {{/supportsRetry}}
     {{#validatable}}
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
     {{/validatable}}
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.4" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.8.0" />
   </ItemGroup>
 
 {{>netcore_project.additions}}</Project>
